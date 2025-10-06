@@ -25,6 +25,21 @@ def main():
     repo.delete(users[2].id)
     print("✓ Usuario eliminado")
 
+    print("\n5. VALIDACIONES DE DATOS")
+    invalid_cases = [
+        ("", "test@email.com", 25, "Nombre vacio"),
+        ("Juan", "email-sin-arroba", 25, "Email invalido"),
+        ("Pedro", "pedro@email.com", -5, "Edad negativa"),
+        ("Ana", "ana@email.com", 200, "Edad muy alta"),
+    ]
+
+    for name, email, age, desc in invalid_cases:
+        try:
+            repo.create(name, email, age)
+            print(f"✗ {desc}: deberia fallar")
+        except ValueError as e:
+            print(f"✓ {desc}: {e}")
+
     print(f"\nTotal final: {len(repo.list_all())}")
 
 if __name__ == "__main__":
