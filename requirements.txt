@@ -1,0 +1,4 @@
+# Dependencias para el proyecto CRUD con Property-Based Testing
+
+hypothesis>=6.0.0
+pytest>=7.0.0
