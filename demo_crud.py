@@ -42,5 +42,15 @@ def main():
 
     print(f"\nTotal final: {len(repo.list_all())}")
 
+def demonstrate_property_concept():
+    print("\n=== QUE SON LAS PROPIEDADES? ===")
+    print("En lugar de probar casos especificos, se prueban PROPIEDADES.")
+    print("Ejemplo:")
+    print(" - Para cualquier nombre, email y edad validos:")
+    print("   * El usuario creado debe poder leerse")
+    print("   * Los datos deben conservarse exactamente")
+    print("   * El ID debe ser unico y valido")
+
 if __name__ == "__main__":
     main()
+    demonstrate_property_concept()
